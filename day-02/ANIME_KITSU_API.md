@@ -33,17 +33,11 @@ A small, robust Python **CLI tool** that lets you filter anime by **category**, 
     ├── anime_data_extraction.py       # Transform, pretty-print, and save outputs
     └── README.md                      # This document
 
-
-> ```python
-> from anime_data_extraction import *
-> ```
-
 ***
 
 ## 🏛️ Architecture / Workflow Diagram
 
-
-
+![api](https://github.com/user-attachments/assets/4f21cf99-0ac0-429d-a57b-179cb907b3ea)
 
 ***
 
