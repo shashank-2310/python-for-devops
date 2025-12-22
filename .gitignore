@@ -1,6 +1,8 @@
 # Ignore generated files
 demo.txt
 *.txt
+*.csv
+*.json
 
 # Virtual Environment
 venv/

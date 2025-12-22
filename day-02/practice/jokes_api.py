@@ -2,7 +2,7 @@ import requests
 
 base_url = "https://v2.jokeapi.dev/joke/"
 
-def get_jokes(cat, flags) -> None:
+def get_jokes(cat, flags) -> str:
     if cat not in ['dark', 'pun', 'spooky', 'christmas', 'misc', 'any']:
         print("Invalid Category! Proceeding with a random joke.")
         cat = 'any'
@@ -18,8 +18,18 @@ def get_jokes(cat, flags) -> None:
         print(f"API Error: {data.get('message', 'Something went wrong!')}")
         return
     
-    print(f"\nHere's a {data["category"].lower()} joke for you. Enjoy...! 😆\n")
-    joke = data["setup"] + "\n" + data["delivery"] + "\n"
+    category = data.get("category", "random").lower()
+    print(f"\nHere's a {category} joke for you. Enjoy...! 😆\n")
+    
+    joke_type = data.get("type")
+    if joke_type == "single":
+        joke = data.get("joke", "No joke text returned.") + "\n"
+    elif joke_type == "twopart":
+        setup = data.get("setup", "")
+        delivery = data.get("delivery", "")
+        joke = setup + "\n" + delivery + "\n"
+    else:
+        return "Something went wrong...!\n"
     
     return joke
 

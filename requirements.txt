@@ -13,3 +13,7 @@
 # Used to fetch CPU, memory, disk metrics
 psutil>=5.9.0
 
+# Day 02 – API Interactions
+# Used for making HTTP requests
+requests>=2.28.0
+
