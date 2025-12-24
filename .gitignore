@@ -3,7 +3,6 @@ demo.txt
 *.txt
 *.csv
 *.json
-.gitignore
 
 # Virtual Environment
 venv/
