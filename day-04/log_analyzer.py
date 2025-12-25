@@ -14,15 +14,14 @@ def count_log_levels(LOG_FILE) -> None:
     cnt = dict.fromkeys(keys, 0)
     
     try:
-        if log_file_path.exists():
-            with log_file_path.open(
-            "r",
-            encoding = "utf-8"
-            ) as f:
-                for line in f:
-                    for key in keys:
-                        if key in line:
-                            cnt[key] += 1
+        with log_file_path.open(
+        "r",
+        encoding = "utf-8"
+        ) as f:
+            for line in f:
+                for key in keys:
+                    if key in line:
+                        cnt[key] += 1
     except FileNotFoundError:
         print("[ERROR] File not found!")
         sys.exit(1)
