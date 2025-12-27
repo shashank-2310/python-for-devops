@@ -1,5 +1,4 @@
 import boto3
-import boto3.session
 
 class AWSUtils:
     def __init__(self):
@@ -7,7 +6,6 @@ class AWSUtils:
         self.ec2 = self.get_connection("ec2")
 
     def get_connection(self,service):
-        boto3.session(access="ADSLDNASKLJND")
         return boto3.client(service) # creating a client for S3 so that it can call APIs
 
     def show_buckets(self):
