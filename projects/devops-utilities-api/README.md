@@ -2,22 +2,31 @@
 
 ## Aim
 
-This Project aims to deliver Production grade Utilities APIs to internal teams:
+Internal API surface for common DevOps utilities, intended for internal teams:
 
 - AWS Resources APIs
 - Metrics
-- Log Analysis 
+- Log Analysis
 
 ## Usage
 
-'git clone <>'
+```bash
+git clone <repo-url>
+cd devops-utilities-api
+```
 
 ### setup python environment
+```bash
 python3.14 -m venv venv
 source venv/bin/activate
+```
 
 ### install requirements
+```bash
 pip install -r requirements.txt
+```
 
 ### run application
+```bash
 python main.py
+```
